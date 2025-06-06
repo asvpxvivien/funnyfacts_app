@@ -56,14 +56,34 @@ class _MainScreenState extends State<MainScreen> {
           ),
         ],
       ),
-      body: PageView.builder(
-        itemCount: facts.length,
-        itemBuilder: (BuildContext, int index) {
-          return Padding(
+      body: Column(
+        children: [
+          Expanded(
+            child: PageView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: facts.length,
+              itemBuilder: (BuildContext, int index) {
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Center(
+                    child: Container(
+                      child: Text(
+                        facts[index],
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 30),
+                      ),
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
+
+          Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Center(child: Container(child: Text(facts[index]))),
-          );
-        },
+            child: Container(child: Text("Swipe left for more")),
+          ),
+        ],
       ),
     );
   }
