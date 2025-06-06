@@ -13,6 +13,7 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   List<dynamic> facts = [];
+  bool isLoading = true;
 
   void getData() async {
     try {
@@ -20,8 +21,10 @@ class _MainScreenState extends State<MainScreen> {
         "https://raw.githubusercontent.com/asvpxvivien/flutter_funfacts_api/refs/heads/main/funnyfacts.json",
       );
       facts = jsonDecode(response.data);
+      isLoading = false;
       setState(() {});
     } catch (e) {
+      isLoading = false;
       print(e);
     }
   }
@@ -62,24 +65,27 @@ class _MainScreenState extends State<MainScreen> {
       body: Column(
         children: [
           Expanded(
-            child: PageView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: facts.length,
-              itemBuilder: (BuildContext, int index) {
-                return Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Center(
-                    child: Container(
-                      child: Text(
-                        facts[index],
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 30),
-                      ),
+            child:
+                isLoading
+                    ? Center(child: CircularProgressIndicator())
+                    : PageView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: facts.length,
+                      itemBuilder: (BuildContext, int index) {
+                        return Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Center(
+                            child: Container(
+                              child: Text(
+                                facts[index],
+                                textAlign: TextAlign.center,
+                                style: TextStyle(fontSize: 30),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
                     ),
-                  ),
-                );
-              },
-            ),
           ),
 
           Padding(
