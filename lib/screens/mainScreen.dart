@@ -26,14 +26,16 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
 
   // Couleurs dégradées pour les cartes
   final List<List<Color>> gradientColors = [
-    [const Color(0xFF667eea), const Color(0xFF764ba2)],
-    [const Color(0xFFf093fb), const Color(0xFFf5576c)],
-    [const Color(0xFF4facfe), const Color(0xFF00f2fe)],
-    [const Color(0xFF43e97b), const Color(0xFF38f9d7)],
-    [const Color(0xFFfa709a), const Color(0xFFfee140)],
-    [const Color(0xFF38f9d7), const Color(0xFFfed6e3)],
-    [const Color(0xFFffecd2), const Color(0xFFfcb69f)],
-    [const Color(0xFFff9a9e), const Color(0xFFfecfef)],
+    [Color(0xFF2193b0), Color(0xFF6dd5ed)],
+    [Color(0xFFcc2b5e), Color(0xFF753a88)],
+    [Color(0xFFee9ca7), Color(0xFFffdde1)],
+    [Color(0xFF42275a), Color(0xFF734b6d)],
+    [Color(0xFFbdc3c7), Color(0xFF2c3e50)],
+    [Color(0xFF56ab2f), Color(0xFFa8e063)],
+    [Color(0xFF614385), Color(0xFF516395)],
+    [Color(0xFFe65c00), Color(0xFFF9D423)],
+    [Color(0xFF1488CC), Color(0xFF2B32B2)],
+    [Color(0xFFf46b45), Color(0xFFeea849)],
   ];
 
   void getData() async {
