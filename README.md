@@ -1,16 +1,73 @@
-# funfacts
 
-A new Flutter project.
+# 🎉 Funny Facts App
 
-## Getting Started
+A modern and fun Flutter app that delivers random funny facts with a clean UI, enhanced features, and smooth user experience. This project has been significantly upgraded to bring users a more intuitive, responsive, and visually appealing interface.
 
-This project is a starting point for a Flutter application.
+![App Screenshot](asserts/funny_facts.gif)
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+##  Features
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+-  **Modern UI** with Material Design 3 and custom themes
+-  **Copy facts** to clipboard with visual feedback
+-  **Random navigation** to explore surprising facts
+-  **Share facts** with friends using `share_plus`
+-  **Progress indicator** to track current fact
+-  **Advanced Settings page** with organized sections
+-  **Dark/Light mode** support
+
+---
+
+##  User Experience
+
+- Smooth animations for screen transitions and fact cards
+- Retry mechanism for error handling
+- Tactile and visual feedback on all actions
+- Intuitive navigation through swipe and buttons
+- Enhanced loading and error states
+
+---
+
+##  Project Structure
+
+```
+lib/
+│
+├── main.dart
+│   
+├── screens/
+│   ├── home_screen.dart
+│   └── settings_screen.dart
+│ 
+├── widgets/
+│   └── themeSwitcher.dart
+└── providers/
+    ├── themeProvider.dart
+    └── constants.dart
+```
+
+---
+
+##  Dependencies
+
+Make sure to update your `pubspec.yaml`:
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^6.1.0
+  share_plus: ^7.2.1
+  url_launcher: ^6.2.5
+  package_info_plus: ^5.0.1
+```
+
+Install via:
+
+```bash
+flutter pub get
+```
+
+---
+
