@@ -3,7 +3,10 @@
 
 A modern and fun Flutter app that delivers random funny facts with a clean UI, enhanced features, and smooth user experience. This project has been significantly upgraded to bring users a more intuitive, responsive, and visually appealing interface.
 
-![App Screenshot](assets/funny_facts.gif)
+
+<p align="center">
+  <img src="assets/funny_facts.gif" alt="Demo" width="400"/>
+</p>
 
 ---
 
