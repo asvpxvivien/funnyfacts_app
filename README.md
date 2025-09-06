@@ -5,7 +5,7 @@ A modern and fun Flutter app that delivers random funny facts with a clean UI, e
 
 
 <p align="center">
-  <img src="assets/funny_facts.gif" alt="Demo" width="300"/>
+  <img src="assets/funny_facts.gif" width="250" alt="Demo" />
 </p>
 
 ---
